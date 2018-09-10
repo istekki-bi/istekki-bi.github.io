@@ -23,8 +23,6 @@
    * by the user.  This interval will refresh all selected datasources.
    */
   function paivitasivua() {
-   // alert( 'Sivu päivitetty' );
-	
 	  /**
    * This function sets up a JavaScript interval based on the time interval selected
    * by the user.  This interval will refresh all selected datasources.
