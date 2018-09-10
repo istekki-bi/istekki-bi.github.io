@@ -33,11 +33,13 @@
         
 		  //katsotaan parametrin nimi
 		  //jos löytyy oikean niminen parametri niin otetaan sen arvo ja asetetaan se sekuntimääräksi data sourcen päivitykseen
-		  if(p.name === "paivitysvali_sekuntia") {
+		 
+		 alert("moi");
+		 /* if(p.name === "paivitysvali_sekuntia") {
 			  
 			  sekunnit = p.currentValue;
 			  
-		  }
+		  }*/
 		  
         })
    };)();
