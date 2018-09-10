@@ -35,7 +35,9 @@
         worksheet.getDataSourcesAsync().then(function (datasources) {
           datasources.forEach(function (datasource) {
 
-               datasource.refreshAsync();
+               //datasource.refreshAsync();
+			   
+			   alert('Hello world!');
              
           });
         });
