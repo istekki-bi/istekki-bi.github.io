@@ -39,7 +39,8 @@
     // This uses the window.location.origin property to retrieve the scheme, hostname, and 
     // port where the parent extension is currently running, so this string doesn't have
     // to be updated if the extension is deployed to a new location.
-    const popupUrl = `${window.location.origin}/Samples/UINamespace/uiNamespaceDialog.html`;
+    //const popupUrl = `${window.location.origin}/Samples/UINamespace/uiNamespaceDialog.html`;
+    const popupUrl = `${window.location.origin}/uiNamespaceDialog.html`;
 
     /**
      * This is the API call that actually displays the popup extension to the user.  The
