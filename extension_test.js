@@ -23,11 +23,28 @@
    * by the user.  This interval will refresh all selected datasources.
    */
   function paivitasivua() {
-    alert( 'Sivu päivitetty' );
+   // alert( 'Sivu päivitetty' );
 	
-	setTimeout(function() {
-	location.reload();
-						}, 10000);
+	  /**
+   * This function sets up a JavaScript interval based on the time interval selected
+   * by the user.  This interval will refresh all selected datasources.
+   */
+   
+   
+    refreshInterval = setInterval(function() { 
+      let dashboard = tableau.extensions.dashboardContent.dashboard;
+      dashboard.worksheets.forEach(function (worksheet) {
+        worksheet.getDataSourcesAsync().then(function (datasources) {
+          datasources.forEach(function (datasource) {
+             if (activeDatasourceIdList.indexOf(datasource.id) >= 0) {
+               datasource.refreshAsync();
+             }
+          });
+        });
+      });
+    }, 5*1000);
+  
   }
 
 })();
+
