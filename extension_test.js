@@ -23,11 +23,27 @@
    * by the user.  This interval will refresh all selected datasources.
    */
   function paivitasivua() {
-	  /**
-   * This function sets up a JavaScript interval based on the time interval selected
-   * by the user.  This interval will refresh all selected datasources.
-   */
-   
+
+  var sekunnit = 60; //oletuksena minuutti
+  /*haetaan asetettu aika*/
+  
+  //haetaan kaikki parametrit
+   tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function (parametrit) {
+        parametrit.forEach(function (p) {
+        
+		  //katsotaan parametrin nimi
+		  //jos löytyy oikean niminen parametri niin otetaan sen arvo ja asetetaan se sekuntimääräksi data sourcen päivitykseen
+		  if(p.name == 'paivitysvali_sekuntia') {
+			  
+			  sekunnit = p.currentValue;
+			  
+		  }
+		  
+        })
+   };
+  
+  
+   /*päivittää datasourcet*/
    
     refreshInterval = setInterval(function() { 
       let dashboard = tableau.extensions.dashboardContent.dashboard;
@@ -41,7 +57,7 @@
           });
         });
       });
-    }, 5*1000);
+    }, sekunnit*1000);
   
   }
 
