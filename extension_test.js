@@ -27,7 +27,9 @@
   var sekunnit = 5; //oletuksena minuutti
   /*haetaan asetettu aika*/
   
-
+	 tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function (parametrit) {
+		 
+	 });
    
   
   
