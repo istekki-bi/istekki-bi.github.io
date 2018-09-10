@@ -29,6 +29,15 @@
   
 	 tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function (parametrit) {
 		 
+		 parametrit.forEach(function (p) {
+		 
+		 if(p.name === "paivitysvali_sekuntia") {
+			  
+			  sekunnit = p.currentValue;
+			  
+		  }
+		 
+		 });
 	 });
    
   
