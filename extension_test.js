@@ -24,25 +24,11 @@
    */
   function paivitasivua() {
 
-  var sekunnit = 60; //oletuksena minuutti
+  var sekunnit = 5; //oletuksena minuutti
   /*haetaan asetettu aika*/
   
-  //haetaan kaikki parametrit
-   tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function (parametrit) {
-        parametrit.forEach(function (p) {
-        
-		  //katsotaan parametrin nimi
-		  //jos löytyy oikean niminen parametri niin otetaan sen arvo ja asetetaan se sekuntimääräksi data sourcen päivitykseen
-		 
-		 alert("moi");
-		 /* if(p.name === "paivitysvali_sekuntia") {
-			  
-			  sekunnit = p.currentValue;
-			  
-		  }*/
-		  
-        })
-   };)();
+
+   
   
   
    /*päivittää datasourcet*/
