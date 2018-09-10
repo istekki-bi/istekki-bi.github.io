@@ -34,9 +34,9 @@
       dashboard.worksheets.forEach(function (worksheet) {
         worksheet.getDataSourcesAsync().then(function (datasources) {
           datasources.forEach(function (datasource) {
-             if (activeDatasourceIdList.indexOf(datasource.id) >= 0) {
+
                datasource.refreshAsync();
-             }
+             
           });
         });
       });
