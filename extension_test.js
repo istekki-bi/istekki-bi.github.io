@@ -35,6 +35,7 @@
 			  
 			  sekunnit = p.currentValue;
 			  
+			  alert(sekunnit);
 		  }
 		 
 		 });
