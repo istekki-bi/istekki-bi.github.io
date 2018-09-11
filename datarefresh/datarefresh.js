@@ -34,8 +34,7 @@
 		 if(p.name === "paivitysvali_sekuntia") {
 			  
 			  sekunnit = p.currentValue.formattedValue;
-			  
-			  alert(sekunnit);
+			 
 		  }
 		 
 		 });
