@@ -33,7 +33,7 @@
 		 
 		 if(p.name === "paivitysvali_sekuntia") {
 			  
-			  sekunnit = p.currentValue.DataValue.value;
+			  sekunnit = p.currentValue.formattedValue;
 			  
 			  alert(sekunnit);
 		  }
