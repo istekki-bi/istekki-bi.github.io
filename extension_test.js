@@ -39,13 +39,10 @@
 		  }
 		 
 		 });
-	 });
+		 
+		    /*päivittää datasourcet*/
    
-  
-  
-   /*päivittää datasourcet*/
-   
-    refreshInterval = setInterval(function() { 
+	  refreshInterval = setInterval(function() { 
       let dashboard = tableau.extensions.dashboardContent.dashboard;
       dashboard.worksheets.forEach(function (worksheet) {
         worksheet.getDataSourcesAsync().then(function (datasources) {
@@ -58,6 +55,17 @@
         });
       });
     }, sekunnit*1000);
+  
+		 
+	 });
+   
+  
+  
+
+  
+  
+  
+  
   
   }
 
