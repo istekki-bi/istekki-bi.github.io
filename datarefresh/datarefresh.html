@@ -20,12 +20,23 @@
     <script src="./datarefresh.js"></script>
   </head>
   <body>
+  
+  <!-- käyttöliittymä josta voidaan syöttää aika -->
     <div class="container">
-      <p id="mainContent">
-        <div id="active" style="display: none;">
-          Automaattinen workbookin datasourcen päivitys.
+        <div id="ui">
+        <h4>Määritä tietolähteiden päivitysaika sekunteina</h4>
+        <div class="table-responsive">   
+          <table id="uiTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Päivitysaika sekunteina</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
-      </p>
+      </div>
     </div>
   </body>
 </html>
